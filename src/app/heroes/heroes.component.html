@@ -29,6 +29,7 @@
 </div>
 -->
 
+<!--
 <hr style="color:red">
 <h2>My Heroes</h2>
 <ul class="heroes">
@@ -36,7 +37,16 @@
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
-
 <app-hero-detail [selectedOneHero]="selectedHero"></app-hero-detail>
 <p>heroes works!</p>
+-->
 
+<hr style="color:red">
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul>
